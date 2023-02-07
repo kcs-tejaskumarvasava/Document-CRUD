@@ -55,4 +55,11 @@ public class GuideLineDocumentApiController {
 			@RequestParam("pageSize") int pageSize,@RequestBody SearchDocumentVO searchDocumentVO) {
 		return guideLineDocumentService.findAll(pageNo, pageSize, searchDocumentVO);
 	}
+	
+	@PostMapping("/guidelineDocument/git test")
+	public Page<GuideLineDocumentResponseVO> getTestGuideLineDocumentDetails(@RequestParam("pageNo") int pageNo,
+			@RequestParam("pageSize") int pageSize,@RequestBody SearchDocumentVO searchDocumentVO) {
+		System.out.println("Git demo test revert");
+		return null;
+	}
 }
